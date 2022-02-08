@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start" : "node serveur.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "e2e" : "ng e2e",
     "heroku-postbuild": "ng build"
+    
   },
   "private": true,
   "dependencies": {
