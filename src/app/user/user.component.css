@@ -1,0 +1,17 @@
+.user:hover{
+    color: rgb(199, 97, 97);
+}
+
+img:hover {
+    border: 6px solid rgb(182, 94, 94);
+}
+
+img{
+    border: 6px solid white;
+    transition-duration: 1000ms;
+}
+
+.user{
+    color : black;
+    transition-duration: 500ms;
+}

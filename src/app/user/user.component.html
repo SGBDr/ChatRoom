@@ -1,1 +1,14 @@
-<p>user works!</p>
+<a [routerLink]="'chat/' + discus.id" style="text-decoration: none" class="user">
+  <div class="m-3 d-flex bg-light p-1">
+    <img [src]="discus.image" class="rounded-circle" alt="...">
+    <div class="m-2">
+      <h6>{{ discus.nameUser }}</h6>
+      <small>{{ discus.lastMessage.content }}</small>
+      <div class="text-right">
+        <p class="size">
+          {{ discus.lastMessage.date }}
+        </p>
+      </div>
+    </div>
+  </div>
+</a>

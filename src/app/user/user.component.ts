@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import { Component, Input, OnInit } from '@angular/core';
+import { Discus } from '../Interface/discus';
+import { User } from '../Interface/User';
+import { UserService } from '../Service/UserService';
 
 @Component({
   selector: 'app-user',
@@ -7,7 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  @Input() discus! : Discus
+
+  constructor(private userService : UserService) { 
+    console.log(this.discus)
+  }
 
   ngOnInit(): void {
   }

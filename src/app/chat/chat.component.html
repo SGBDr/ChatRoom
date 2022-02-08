@@ -1,1 +1,27 @@
-<p>chat works!</p>
+<div>
+    <div class="bg-success p-4">
+        <h5>{{user.discus[id].nameUser}}</h5>
+    </div>
+    <div style="overflow: auto;" class="diss">
+        <div *ngFor="let message of user.discus[id].sms" class="bg-light rounded-2 m-2 p-3">
+            <div *ngIf="message.you.toLowerCase() !== user.name.toLowerCase()" class="text-end">
+                <h6 class="text-break">
+                    {{message.content}}
+                </h6>
+                <small>{{message.date}}</small>
+            </div>
+            <div *ngIf="message.you.toLowerCase() === user.name.toLowerCase()" class="text-start">
+                <h6 class="text-break">
+                    {{message.content}}
+                </h6>
+                <small>{{message.date}}</small>
+            </div>
+        </div>
+    </div>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="d-flex">
+            <textarea class="w-100 m-2" name="sms" style="height: 100px" cols="30" rows="10" ngModel required> {{sms}}</textarea>
+            <button class="rounded-1" type="submit" [disabled]="f.invalid">Send</button>
+        </div>
+    </form>
+</div>

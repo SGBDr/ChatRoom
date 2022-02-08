@@ -1,0 +1,18 @@
+.ml-5{
+    margin-left : 20px;
+}
+
+.chats{
+    height : 100%;
+}
+
+.size{
+    font-size : 5px;
+    color: red;
+}
+
+.scrollarea {
+    height: 605px;
+    overflow-y: auto;
+}
+
